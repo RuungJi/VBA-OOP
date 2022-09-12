@@ -19,3 +19,7 @@ End Sub
 Public Sub IDuck_display()
     Debug.Print "물오리입니다!"
 End Sub
+
+Public Sub IDuck_fly()
+    Debug.Print "물오리가 날아다닙니다"
+End Sub

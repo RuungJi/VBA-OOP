@@ -18,3 +18,7 @@ End Sub
 Public Sub display()
      Debug.Print "붉은머리오리입니다!"
 End Sub
+
+Public Sub fly()
+    Debug.Print "붉은머리오리가 날아다닙니다"
+End Sub

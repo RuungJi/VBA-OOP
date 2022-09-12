@@ -18,3 +18,7 @@ End Sub
 Public Sub display()
     '오리를 보여줍니다
 End Sub
+
+Public Sub fly()
+    '오리가 날아다닙니다
+End Sub
