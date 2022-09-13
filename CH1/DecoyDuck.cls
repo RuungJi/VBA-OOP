@@ -3,23 +3,27 @@ BEGIN
   MultiUse = -1  'True
 END
 Attribute VB_Name = "DecoyDuck"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
 '@Folder("CH1.Duck")
-'@ModuleDescription("ê³ ë¬´ì˜¤ë¦¬ í´ë˜ìŠ¤ì…ë‹ˆë‹¤")
+'@ModuleDescription("°í¹«¿À¸® Å¬·¡½ºÀÔ´Ï´Ù")
 Option Explicit
 Implements IDuck
 
-Public Sub IDuck_quack()
-    ' ê°€ì§œ ì˜¤ë¦¬ëŠ” ì•„ë¬´ ì†Œë¦¬ë„ ë‚¼ ìˆ˜ ì—†ìŠµë‹ˆë‹¤
+Public Sub IDuck_performQuack()
+    ' °¡Â¥ ¿À¸®´Â ¾Æ¹« ¼Ò¸®µµ ³¾ ¼ö ¾ø½À´Ï´Ù
 End Sub
 
 Public Sub IDuck_swim()
-    ' ê°€ì§œì˜¤ë¦¬ëŠ” ë¬¼ì— ëœ¨ì§€ ì•ŠìŠµë‹ˆë‹¤
+    ' °¡Â¥¿À¸®´Â ¹°¿¡ ¶ßÁö ¾Ê½À´Ï´Ù
 End Sub
 
 Public Sub IDuck_display()
-    Debug.Print "ê°€ì§œì˜¤ë¦¬ì…ë‹ˆë‹¤!"
+    Debug.Print "°¡Â¥¿À¸®ÀÔ´Ï´Ù!"
 End Sub
 
-Public Sub IDuck_fly()
-    ' ê°€ì§œì˜¤ë¦¬ëŠ” ë‚  ìˆ˜ ì—†ìŠµë‹ˆë‹¤
+Public Sub IDuck_performFly()
+    ' °¡Â¥¿À¸®´Â ³¯ ¼ö ¾ø½À´Ï´Ù
 End Sub

@@ -3,23 +3,31 @@ BEGIN
   MultiUse = -1  'True
 END
 Attribute VB_Name = "MallardDuck"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
 '@Folder("CH1.Duck")
-'@ModuleDescription("ë¬¼ì˜¤ë¦¬ í´ë˜ìŠ¤ì…ë‹ˆë‹¤")
+'@ModuleDescription("¹°¿À¸® Å¬·¡½ºÀÔ´Ï´Ù")
 Option Explicit
 Implements IDuck
 
-Public Sub IDuck_quack()
-    Debug.Print "ì €ëŠ” ë¬¼ì˜¤ë¦¬ì…ë‹ˆë‹¤"
+Public Sub IDuck_performQuack()
+    Dim behavior As IQuackBehavior
+    Set behavior = New quack
+    behavior.quack
 End Sub
 
 Public Sub IDuck_swim()
-    Debug.Print "ë¬¼ì˜¤ë¦¬ëŠ” í—¤ì—„ì¹©ë‹ˆë‹¤"
+    Debug.Print "¹°¿À¸®´Â Çì¾öÄ¨´Ï´Ù"
 End Sub
 
 Public Sub IDuck_display()
-    Debug.Print "ë¬¼ì˜¤ë¦¬ì…ë‹ˆë‹¤!"
+    Debug.Print "¹°¿À¸®ÀÔ´Ï´Ù!"
 End Sub
 
-Public Sub IDuck_fly()
-    Debug.Print "ë¬¼ì˜¤ë¦¬ê°€ ë‚ ì•„ë‹¤ë‹™ë‹ˆë‹¤"
+Public Sub IDuck_performFly()
+    Dim behavior As IFlyBehavior
+    Set behavior = New FlyWithWings
+    behavior.fly
 End Sub

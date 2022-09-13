@@ -3,22 +3,30 @@ BEGIN
   MultiUse = -1  'True
 END
 Attribute VB_Name = "IDuck"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
 '@Folder("CH1.Duck")
-'@ModuleDescription("Duck ì¸í„°í˜ì´ìŠ¤ì…ë‹ˆë‹¤")
+'@ModuleDescription("Duck ÀÎÅÍÆäÀÌ½ºÀÔ´Ï´Ù")
 Option Explicit
 
-Public Sub quack()
-    'ì˜¤ë¦¬ê°€ ì†Œë¦¬ëƒ…ë‹ˆë‹¤
+Public Sub performQuack()
+    '¿À¸®°¡ ¼Ò¸®³À´Ï´Ù
+    Dim behavior As IQuackBehavior
+    behavior.quack
 End Sub
 
 Public Sub swim()
-    'ì˜¤ë¦¬ê°€ í—¤ì—„ì¹©ë‹ˆë‹¤
+    '¿À¸®°¡ Çì¾öÄ¨´Ï´Ù
 End Sub
 
 Public Sub display()
-    'ì˜¤ë¦¬ë¥¼ ë³´ì—¬ì¤ë‹ˆë‹¤
+    '¿À¸®¸¦ º¸¿©Áİ´Ï´Ù
 End Sub
 
-Public Sub fly()
-    'ì˜¤ë¦¬ê°€ ë‚ ì•„ë‹¤ë‹™ë‹ˆë‹¤
+Public Sub performFly()
+    '¿À¸®°¡ ³¯¾Æ´Ù´Õ´Ï´Ù
+    Dim behavior As IFlyBehavior
+    behavior.fly
 End Sub

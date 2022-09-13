@@ -3,23 +3,27 @@ BEGIN
   MultiUse = -1  'True
 END
 Attribute VB_Name = "RubberDuck"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = False
+Attribute VB_Exposed = False
 '@Folder("CH1.Duck")
-'@ModuleDescription("ЙЁ═К╛╢Л≤╓К╕╛ М│╢К·≤Л┼╓Л·┘К▀┬К▀╓")
+'@ModuleDescription("╟М╧╚©ю╦╝ е╛╥║╫╨ют╢о╢ы")
 Option Explicit
 Implements IDuck
 
-Public Sub IDuck_quack()
-    Debug.Print "Л┌▒Л┌▒"
+Public Sub IDuck_performQuack()
+    Debug.Print "╩Ю╩Ю!"
 End Sub
 
 Public Sub IDuck_swim()
-    Debug.Print "ЙЁ═К╛╢Л≤╓К╕╛К┼■ К╛╪Л≈░ К°╧К▀┬К▀╓"
+    Debug.Print "╟М╧╚©ю╦╝╢б ╧╟©║ ╤Е╢о╢ы"
 End Sub
 
 Public Sub IDuck_display()
-    Debug.Print "ЙЁ═К╛╢Л≤╓К╕╛Л·┘К▀┬К▀╓!"
+    Debug.Print "╟М╧╚©ю╦╝ют╢о╢ы!"
 End Sub
 
-Public Sub IDuck_fly()
-    ' ЙЁ═К╛╢Л≤╓К╕╛К┼■ К┌═ Л┬≤ Л≈├Л┼╣К▀┬К▀╓
+Public Sub IDuck_performFly()
+    ' ╟М╧╚©ю╦╝╢б Ё╞ ╪Ж ╬Ь╫ю╢о╢ы
 End Sub
