@@ -13,8 +13,6 @@ Option Explicit
 
 Public Sub performQuack()
     '오리가 소리냅니다
-    Dim behavior As IQuackBehavior
-    behavior.quack
 End Sub
 
 Public Sub swim()
@@ -27,6 +25,12 @@ End Sub
 
 Public Sub performFly()
     '오리가 날아다닙니다
-    Dim behavior As IFlyBehavior
-    behavior.fly
 End Sub
+
+Public Function setQuackBehavior(qb As IQuackBehavior)
+    '오리가 다른 소리를 냅니다
+End Function
+
+Public Function setFlyBehavior(fb As IFlyBehavior)
+    '오리가 다르게 날아다닙니다
+End Function
