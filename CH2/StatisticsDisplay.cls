@@ -17,7 +17,7 @@ Private Type TStatisticsDisplay
     minTemp As Single
     tempSum As Single
     numReadings As Integer
-    weather As ISubject
+    weather As weatherData
 End Type
 Private this As TStatisticsDisplay
 
@@ -28,19 +28,21 @@ End Sub
 
 Public Function create(weather As ISubject)
     Set this.weather = weather
-    this.weather.registerObserver New StatisticsDisplay
+    this.weather.ISubject_registerObserver Me
 End Function
 
-Public Function IObserver_update(temperature As Single, humidity As Single, pressure As Single)
-    this.tempSum = this.tempSum + temperature
+Public Function IObserver_update()
+    Dim temp As Single
+    temp = this.weather.getTemperature
+    this.tempSum = this.tempSum + temp
     this.numReadings = this.numReadings + 1
 
-    If temperature > this.maxTemp Then
-        this.maxTemp = temperature
+    If temp > this.maxTemp Then
+        this.maxTemp = temp
     End If
 
-    If temperature < this.minTemp Then
-        this.minTemp = temperature
+    If temp < this.minTemp Then
+        this.minTemp = temp
     End If
 
     IDisplayElement_display

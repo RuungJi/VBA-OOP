@@ -11,5 +11,5 @@ Attribute VB_Exposed = False
 '@ModuleDescription("IObserver Interface")
 Option Explicit
 
-Public Function update(temperature As Single, humidity As Single, pressure As Single)
+Public Function update()
 End Function

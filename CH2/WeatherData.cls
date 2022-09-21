@@ -34,7 +34,7 @@ End Function
 Public Sub ISubject_notifyObservers()
     Dim i As Byte
     For i = 1 To this.observers.Count
-        Call this.observers(i).update(this.temperature, this.humidity, this.pressure)
+        Call this.observers(i).update
     Next i
 End Sub
 
@@ -47,4 +47,16 @@ Public Function setMeasurements(temperature As Single, humidity As Single, press
     this.humidity = humidity
     this.pressure = pressure
     measurementsChanged
+End Function
+
+Public Function getTemperature()
+    getTemperature = this.temperature
+End Function
+
+Public Function getHumidity()
+    getHumidity = this.humidity
+End Function
+
+Public Function getPressure()
+    getPressure = this.pressure
 End Function

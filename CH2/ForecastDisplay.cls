@@ -15,7 +15,7 @@ Implements IDisplayElement
 Private Type TForecastDisplay
     currentPressure As Single
     lastPressure As Single
-    weather As ISubject
+    weather As weatherData
 End Type
 Private this As TForecastDisplay
 
@@ -25,12 +25,12 @@ End Sub
 
 Public Function create(weather As ISubject)
     Set this.weather = weather
-    this.weather.registerObserver New ForecastDisplay
+    this.weather.ISubject_registerObserver Me
 End Function
 
-Public Function IObserver_update(temperature As Single, humidity As Single, pressure As Single)
+Public Function IObserver_update()
     this.lastPressure = this.currentPressure
-    this.currentPressure = pressure
+    this.currentPressure = this.weather.getPressure
     IDisplayElement_display
 End Function
 

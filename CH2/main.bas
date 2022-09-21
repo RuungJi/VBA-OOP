@@ -3,17 +3,18 @@ Attribute VB_Name = "main"
 Option Explicit
 
 Sub WeatherStation()
-    Dim weather As New weatherData
+    Dim weather As weatherData
     Dim currentDS As New CurrentConditionsDisplay
     Dim statisticsDS As New StatisticsDisplay
     Dim forecaseDS As New ForecastDisplay
+    Set weather = New weatherData
     currentDS.create weather
     statisticsDS.create weather
     forecaseDS.create weather
 
-    weather.setMeasurements 20, 35, 31
+    weather.setMeasurements 22, 35, 31
     Debug.Print ""
-    weather.setMeasurements 22, 40, 28
+    weather.setMeasurements 26, 40, 28
     Debug.Print ""
     weather.setMeasurements 18, 50, 28
     Debug.Print ""

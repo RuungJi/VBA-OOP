@@ -15,18 +15,18 @@ Implements IDisplayElement
 Private Type TCurrentConditionsDisplay
     temperature As Single
     humidity As Single
-    weather As ISubject
+    weather As weatherData
 End Type
 Private this As TCurrentConditionsDisplay
 
-Public Function create(weather As ISubject)
+Public Function create(weather As weatherData)
     Set this.weather = weather
-    this.weather.registerObserver New CurrentConditionsDisplay
+    this.weather.ISubject_registerObserver Me
 End Function
 
-Public Function IObserver_update(temperature As Single, humidity As Single, pressure As Single)
-    this.temperature = temperature
-    this.humidity = humidity
+Public Function IObserver_update()
+    this.temperature = this.weather.getTemperature
+    this.humidity = this.weather.getHumidity
     IDisplayElement_display
 End Function
 
